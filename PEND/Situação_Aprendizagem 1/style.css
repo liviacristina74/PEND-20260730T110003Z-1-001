@@ -1,0 +1,33 @@
+/* Estilos da mensagem */
+        #mensagem { margin-top: 15px; font-weight: bold; }
+        .erro { color: red; }
+        .sucesso { color: green; }
+        body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(161, 0, 97);
+}
+
+div {
+    position: relative;
+}
+
+input {
+    width: 250px;
+    line-height: 40px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    border-radius: 15px;
+}
+
+.icone {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}

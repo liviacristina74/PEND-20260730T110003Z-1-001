@@ -1,0 +1,20 @@
+button {
+       background:#19B5FF;
+    color:white;
+}
+
+img {
+  max-width: 50%; /* Largura máxima é 100% do pai */
+  height: auto;    /* Mantém a proporção original */
+}
+
+.foto-pequena {
+  width: 200px;    /* Largura fixa */
+  height: auto;    /* Proporção automática para não distorcer */
+}
+
+.destaque {
+    background-color: red;
+    color: rgb(95, 30, 105);
+}
+

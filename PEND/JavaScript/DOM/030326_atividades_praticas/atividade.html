@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>atividade 1 mudar cor do titulo</h2>
+    <h1 id="texto">atividade 1 mudar cor do titulo</h1>
+    <button id="texto_azul">Mudar para Azul</button>
+    <button id="texto_vermelho">Mudar para vermelho</button>
+
+    <h2> atividade 2 Mostrar e esconder mensagem</h2>
+
+
+
+    <button id="btnToggle" onclick="alternarMensagem()">Esconder Mensagem</button>
+
+    <p id="minhaMensagem">Esta é a mensagem que será escondida/mostrada.</p>
+
+    <h2>atividade 3 Contador de caracteres </h2>
+    <h3>Digite seu texto:</h3>
+    <!-- O campo textarea -->
+    <textarea id="meuTexto" maxlength="100" placeholder="Digite aqui..."></textarea>
+
+    <!-- O parágrafo que mostra a contagem -->
+    <p>Caracteres digitados: <span id="contador">0</span></p>
+
+    <h2>atividade 4 Contador de cliques</h2>
+    <h1>Contador de Cliques</h1>
+
+    <!-- 1. O Parágrafo que exibe o contador -->
+    <p>Cliques: <span id="contador2">0</span></p>
+
+    <!-- 2. O Botão -->
+    <button id="meuBotao">Clique aqui</button>
+
+    <h2>atividade 5, 6 e extra Criar e remover elementos dinamicamente</h2>
+    <h2>Minha Lista de Tarefas</h2>
+
+    <!-- 1. Input para digitar o texto -->
+    <input type="text" id="itemInput" placeholder="Digite um item...">
+
+    <!-- 2. Botão para acionar a função -->
+    <button id="addBtn">Adicionar</button>
+
+    <!-- 3. Lista (vazia inicialmente) -->
+    <ul id="lista"></ul>
+
+    <h2>Desafio HARD!</h2>
+    <h3>Cadastro</h3>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button onclick="validarFormulario()">Enviar</button>
+    
+    <!-- Parágrafo para exibir a mensagem -->
+    <p id="mensagem"></p>
+
+    <h2>Validação simples de e-mail</h2>
+     <div class="container">
+        <h3>Validação de E-mail</h3>
+        <input type="text" id="email" placeholder="Digite seu e-mail">
+        <button onclick="validarEmail()">Validar</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <h2>Verificação simples de força de senha</h2>
+    <input type="password" id="senha" placeholder="Digite a senha">
+<p id="mensagem"></p>
+
+          
+    <script src="atividades.js"></script>
+</body>
+
+</html>

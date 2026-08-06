@@ -6,7 +6,7 @@
     color: green;
 }
 
-/* Corpo da página unificado e corrigido */
+
 body {
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@ body {
 /* Caixa do formulário / containers */
 .container {
     background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
     /* Um toque leve de transparência fica ótimo com fundo */
     padding: 25px;
     border-radius: 15px;

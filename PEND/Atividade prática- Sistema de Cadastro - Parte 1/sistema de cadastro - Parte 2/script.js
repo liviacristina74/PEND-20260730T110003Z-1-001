@@ -16,44 +16,96 @@ class Produto {
 const botao = document.querySelector("#botaoCadastrar");
 const resultadoDiv = document.querySelector("#resultado");
 
+// Função responsável por renderizar a lista no DOM
+function renderizar() {
+    resultadoDiv.innerHTML = "";
+
+    produtos.forEach((prod, index) => {
+        const precoComDesconto = prod.aplicarDesconto();
+
+        resultadoDiv.innerHTML += `
+            <p>
+                <strong>Nome:</strong> ${prod.nome} <br>
+                <strong>Preço:</strong> R$ ${prod.preco.toFixed(2)} <br>
+                <strong>Categoria:</strong> ${prod.categoria || "Sem categoria"} <br>
+                <strong>Desconto:</strong> ${prod.desconto}% <br>
+                <button onclick="excluirProduto(${index})">Excluir</button>
+            </p>
+            <hr>
+        `;
+    });
+}
+
+// Função para remover o produto do Array e atualizar o DOM
+function excluirProduto(indice) {
+    produtos.splice(indice, 1); // Remove 1 item a partir do índice informado
+    renderizar(); // Atualiza a tela
+}
+
+// Evento de cadastro de produtos
 botao.addEventListener("click", () => {
-    // 1. Pega os valores atualizados dos inputs
     const nome = document.querySelector("#nome").value;
     const preco = Number(document.querySelector("#preco").value);
     const categoria = document.querySelector("#categoria").value;
-    const desconto = Number(document.querySelector("#desconto").value) || 0; // se vazio, considera 0
+    const desconto = Number(document.querySelector("#desconto").value) || 0;
 
-    // Validação simples
     if (!nome || isNaN(preco) || preco <= 0) {
         alert("Por favor, preencha o nome e o preço corretamente!");
         return;
     }
 
-    // 2. Cria um novo objeto Produto com os dados digitados
     const novoProduto = new Produto(nome, preco, categoria, desconto);
-
-    // 3. Adiciona o produto cadastrado na lista
     produtos.push(novoProduto);
 
-    // 4. Limpa a div de resultados e redesenha a lista com todos os cadastrados
-    resultadoDiv.innerHTML = "";
+    renderizar();
 
-    produtos.forEach((prod) => {
-        const precoComDesconto = prod.aplicarDesconto();
-
-        resultadoDiv.innerHTML += `
-            <p>
-                <strong>Produto:</strong> ${prod.nome} | 
-                <strong>Preço Original:</strong> R$ ${prod.preco.toFixed(2)} | 
-                <strong>Com Desconto (${prod.desconto}%):</strong> R$ ${precoComDesconto.toFixed(2)} | 
-                <strong>Categoria:</strong> ${prod.categoria || "Sem categoria"}
-            </p>
-        `;
-    });
-
-    // 5. Limpa os campos de texto para o próximo cadastro
+    // Limpa os campos
     document.querySelector("#nome").value = "";
     document.querySelector("#preco").value = "";
     document.querySelector("#categoria").value = "";
     document.querySelector("#desconto").value = "";
+});
+
+// Armazenar os produtos no localStorage antes de sair da página
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+});
+
+// Recuperar os produtos do localStorage ao carregar a página
+window.addEventListener("load", () => {
+    const dados = localStorage.getItem("produtos");
+    if (dados) {
+        const produtosSalvos = JSON.parse(dados);
+        produtos.push(...produtosSalvos);
+        renderizar();
+    }
+});
+
+// Função para limpar o localStorage e a lista de produtos
+function limparLocalStorage() {
+    localStorage.removeItem("produtos");
+    produtos.length = 0; // Limpa o array de produtos
+    renderizar(); // Atualiza a tela
+}
+
+//Atualizar o localStorage após uma exclusão de produto
+function atualizarLocalStorage() {
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+}
+
+// manter os produtos atualizados no localStorage após a exclusão
+function excluirProduto(indice) {
+    produtos.splice(indice, 1); // Remove 1 item a partir do índice informado
+    atualizarLocalStorage(); // Atualiza o localStorage
+    renderizar(); // Atualiza a tela
+}   
+
+// manter os produtos mesmo após fechar e abrir o navegador
+window.addEventListener("load", () => {
+    const dados = localStorage.getItem("produtos");
+    if (dados) {
+        const produtosSalvos = JSON.parse(dados);
+        produtos.push(...produtosSalvos);
+        renderizar();
+    }
 });

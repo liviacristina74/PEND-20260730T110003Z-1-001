@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorveteria - Monte seu Sorvete</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>🍦 Monte o seu Sorvete</h2>
+  <p>Arraste os sabores para a casquinha!</p>
+
+  <div class="ice-cream-shop">
+    <!-- Sabores Disponíveis -->
+    <div class="flavors-container">
+      <h3>Sabores</h3>
+      <div class="ice-cream" draggable="true" id="morango" data-flavor="Morango">
+        🍓 Morango
+      </div>
+      <div class="ice-cream" draggable="true" id="chocolate" data-flavor="Chocolate">
+        🍫 Chocolate
+      </div>
+      <div class="ice-cream" draggable="true" id="baunilha" data-flavor="Baunilha">
+        🍦 Baunilha
+      </div>
+    </div>
+
+    <!-- Área da Casquinha (Drop zone) -->
+    <div class="cone-container" id="cone-target">
+      <h3>Sua Casquinha</h3>
+      <div class="cone">📐</div>
+      <p id="feedback-text">Arraste um sabor até aqui!</p>
+      <div class="scoops-list" id="scoops-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  color: #d87093;
+}
+
+/* Container Principal */
+.ice-cream-shop {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Painel de Sabores */
+.flavors-container {
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Bolas de Sorvete (Arrastáveis) */
+.ice-cream {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: grab;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.ice-cream:active {
+  cursor: grabbing;
+}
+
+/* Cores por sabor */
+#morango { background-color: #ff6b81; }
+#chocolate { background-color: #795548; }
+#baunilha { background-color: #f7d794; color: #333; }
+
+/* Feedback do item em movimento */
+.ice-cream.dragging {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+
+/* Painel da Casquinha */
+.cone-container {
+  width: 220px;
+  min-height: 250px;
+  background-color: #ffffff;
+  border: 2px dashed #ffb6c1;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cone {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+/* Feedback visual ao arrastar sobre a casquinha */
+.cone-container.drag-over {
+  background-color: #ffe4e1;
+  border-color: #ff1493;
+}
+
+/* Lista de sabores adicionados */
+.scoop-item {
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  animation: popIn 0.3s ease;
+}
+
+.scoop-item.morango { background-color: #ff6b81; }
+.scoop-item.chocolate { background-color: #795548; }
+.scoop-item.baunilha { background-color: #f7d794; color: #333; }
+
+@keyframes popIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}

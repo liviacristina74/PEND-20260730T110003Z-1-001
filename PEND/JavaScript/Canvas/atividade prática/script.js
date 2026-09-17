@@ -17,12 +17,13 @@ contexto.moveTo(100, 50);
 contexto.lineTo(100, 150);
 contexto.stroke();
 
-//desenho dos braços do boneco
+//braço esquerdo do boneco
 contexto.beginPath();
 contexto.moveTo(100, 70);
 contexto.lineTo(50, 100);
 contexto.stroke();
 
+//braço direito do boneco
 contexto.beginPath();
 contexto.moveTo(100, 70);
 contexto.lineTo(150, 100);

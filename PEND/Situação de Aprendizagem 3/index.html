@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luan Santana - Eventos & Turnê</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho / Hero -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>Luan Santana</h1>
+      <p>Busca de Eventos e Shows Ao Vivo</p>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    
+    <!-- Barra de Pesquisa e Filtro -->
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Filtrar por cidade ou local...">
+      <button id="searchBtn">Buscar Eventos</button>
+      <button id="resetBtn" class="btn-secondary">Ver Todos</button>
+    </section>
+
+    <!-- Indicador de Carregamento -->
+    <div id="loading" class="hidden">Carregando eventos...</div>
+
+    <!-- Lista de Eventos -->
+    <section id="eventsContainer" class="events-grid">
+      <!-- Os cards dos eventos serão inseridos aqui dinamicamente via JS -->
+    </section>
+
+  </main>
+
+  <!-- Modal para Detalhes do Evento -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <h2 id="modalTitle">Detalhes do Evento</h2>
+      <p><strong>Data:</strong> <span id="modalDate"></span></p>
+      <p><strong>Local:</strong> <span id="modalLocation"></span></p>
+      <p><strong>Tipo:</strong> <span id="modalType"></span></p>
+      <div id="modalExtra"></div>
+      <button id="favoriteBtn" class="btn-fav"> Salvar nos Favoritos</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Portal Luan Santana - Desenvolvido com HTML, CSS e JS Vanilla.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Catálogo de Produtos</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. Cabeçalho (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Minha Loja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meuMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="meuMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Seção de Destaque (Carrossel) -->
+    <div id="meuCarrossel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner container">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/736x/82/9f/0e/829f0e8fbd470ac8debff4a9ce4fc090.jpg" class="d-block w-100 rounded" style="height: 350px; object-fit: cover;" alt="Banner 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/5d/f7/e4/5df7e4d59d65a7b93ac83a7d213c7922.jpg" class="d-block w-100 rounded" style="height: 350px; object-fit: cover;" alt="Banner 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 3. Seção de Produtos -->
+    <div id="produtos" class="container my-5">
+        <h2 class="text-center mb-4">Produtos</h2>
+        
+        <div class="row">
+            <!-- Produto 1 (Sua Imagem do Pinterest) -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/4f/4b/af/4f4baf385c902df5cf0e9ea391cf6a2e.jpg" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Camiseta">
+                    <div class="card-body">
+                        <h5 class="card-title">Camiseta</h5>
+                        <p class="card-text">R$ 50,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/40/53/b0/4053b02fd3ee7a706f856bb2f099fb41.jpg" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Calça Jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Calça Jeans</h5>
+                        <p class="card-text">R$ 120,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&auto=format&fit=crop&q=80" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Tênis">
+                    <div class="card-body">
+                        <h5 class="card-title">Tênis</h5>
+                        <p class="card-text">R$ 200,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&auto=format&fit=crop&q=80" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Boné">
+                    <div class="card-body">
+                        <h5 class="card-title">Boné</h5>
+                        <p class="card-text">R$ 35,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&auto=format&fit=crop&q=80" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Jaqueta">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaqueta</h5>
+                        <p class="card-text">R$ 180,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/d9/69/c1/d969c1f523733f53244ab6653d685570.jpg" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Vestido">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido</h5>
+                        <p class="card-text">R$ 200,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Seção de Contato -->
+    <div id="contato" class="container my-5">
+        <h2 class="text-center mb-4">Contato</h2>
+        
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" placeholder="Seu nome">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" placeholder="Seu e-mail">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mensagem</label>
+                <textarea class="form-control" rows="3" placeholder="Sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+
+    <!-- 5. Rodapé -->
+    <footer class="bg-secondary text-white text-center py-3">
+        <p class="mb-0">Todos os direitos reservados - 2026</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
